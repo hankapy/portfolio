@@ -9,7 +9,12 @@
 <body>
     <header>
         <nav>
-            <ul class="nav-links">
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
@@ -37,5 +42,15 @@
             <a href="#">GitHub</a>
         </div>
     </section>
+
+    <!-- Hampurilaisvalikon toiminnallisuus -->
+    <script>
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

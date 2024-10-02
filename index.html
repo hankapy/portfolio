@@ -10,12 +10,12 @@
     <!-- Navigointipalkki -->
     <header>
         <nav>
-            <div class="hamburger-menu">
+            <div class="hamburger-menu" id="hamburger-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Me</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
@@ -28,8 +28,17 @@
     <section id="home">
         <h1>Hei, olen Hanna!</h1>
         <p>Tervetuloa portfoliooni. Täältä löydät tietoa minusta, projekteistani ja osaamisestani.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <img src="kuvituskuva.jpg" alt="Kuvituskuva, jossa myös Hanna">
     </section>
+
+    <!-- Hampurilaisvalikon toiminnallisuus -->
+    <script>
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

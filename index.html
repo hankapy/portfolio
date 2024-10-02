@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanna Pyrhönen - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigointipalkki -->
+    <header>
+        <nav>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Etusivu -->
+    <section id="home">
+        <h1>Hei, olen Hanna!</h1>
+        <p>Tervetuloa portfoliooni. Täältä löydät tietoa minusta, projekteistani ja osaamisestani.</p>
+        <img src="kuvituskuva.jpg" alt="Abstrakti kuvituskuva">
+    </section>
+
+    <!-- About Me -sivu -->
+    <section id="about">
+        <h2>Tietoa minusta</h2>
+        <p>Olen data-analyytikko ja Excel-osaaja. Minulla on vahva tausta datan visualisoinnissa ja analysoinnissa.</p>
+        <img src="hanna.jpg" alt="Hanna Pyrhösen kuva">
+    </section>
+
+    <!-- Portfolio-sivu -->
+    <section id="portfolio">
+        <h2>Projektini</h2>
+        <div class="project-card">
+            <img src="projekti1.jpg" alt="Projektin 1 kuva">
+            <p>Projektin 1 kuvaus</p>
+        </div>
+        <div class="project-card">
+            <img src="projekti2.jpg" alt="Projektin 2 kuva">
+            <p>Projektin 2 kuvaus</p>
+        </div>
+        <!-- Lisää projektikortteja tarpeen mukaan -->
+    </section>
+
+    <!-- Contact Me -sivu -->
+    <section id="contact">
+        <h2>Ota yhteyttä</h2>
+        <form>
+            <label for="name">Nimi:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Sähköposti:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Viesti:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Lähetä</button>
+        </form>
+        <div class="social-links">
+            <!-- Sosiaalisen median linkit -->
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
+    </section>
+</body>
+</html>

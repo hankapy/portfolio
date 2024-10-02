@@ -12,9 +12,22 @@ body {
     line-height: 1.5;
 }
 
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
+    background-color: #286B14; /* Vihreä tausta otsikoille */
+    padding: 10px 0;
+    text-align: center;
+}
+
+p {
+    color: #000000;
+    margin: 20px;
+}
+
 /* Navigointi */
 header {
-    background-color: #286B14;
+    background-color: #286B14; /* Metsänvihreä yläpalkki */
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -54,25 +67,35 @@ header {
     font-size: 18px;
 }
 
-/* Etusivu */
-section {
+/* Etusivu ja About me -sivun vihreät osiot */
+section#home, section#about, section#portfolio, section#contact {
+    background-color: #286B14; /* Metsänvihreä tausta */
+    color: #FFFFFF;
     padding: 20px;
     text-align: center;
+    width: 100vw; /* Täyttää koko näkymän leveyden */
+    margin-left: calc(-50vw + 50%); /* Poistaa sivuttain marginaalit */
 }
 
+section#about p {
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Kuvan ja tekstin asettelu */
 section img {
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-}
-
-/* About Me */
-#about img {
     width: 80%;
+    height: auto;
     margin: 20px auto;
+    display: block;
+    background-color: #FFFFFF;
+
 }
 
-/* Portfolio */
+/* Portfolio - Korttien asettelu */
 .project-card {
     background-color: #FFFFFF;
     margin-bottom: 20px;
@@ -85,7 +108,7 @@ section img {
     height: auto;
 }
 
-/* Contact Me */
+/* Contact Me -lomake */
 form {
     display: flex;
     flex-direction: column;
@@ -104,7 +127,7 @@ form input, form textarea {
 }
 
 button {
-    background-color: #bef872;
+    background-color: #bef872; /* Vaaleanvihreä painike */
     color: #000000;
     border: none;
     padding: 10px 20px;
@@ -113,7 +136,7 @@ button {
 }
 
 button:hover {
-    background-color: #286B14;
+    background-color: #286B14; /* Hover-efekti painikkeelle */
     color: #FFFFFF;
 }
 
@@ -137,9 +160,10 @@ button:hover {
         margin: 0 10px;
     }
 
-    #home, #about, #portfolio, #contact {
-        max-width: 1200px;
-        margin: 0 auto;
+    /* Poistetaan sivumarginaalit ja venytetään osiot koko leveydelle */
+    section#home, section#about, section#portfolio, section#contact {
+        width: 100vw; /* Täysi näytön leveys */
+        margin-left: calc(-50vw + 50%); /* Keskittää ja poistaa ylimääräiset marginaalit */
     }
 
     .project-card {
@@ -151,4 +175,9 @@ button:hover {
     .project-card img {
         width: 40%;
     }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }

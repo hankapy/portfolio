@@ -1,59 +1,43 @@
-/* Perusasetukset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Lora', sans-serif;
-    background-color: #FFFFFF;
-    color: #000000;
-    line-height: 1.5;
-}
-
-h1, h2 {
-    font-family: 'Roboto', sans-serif;
-    color: #FFFFFF;
-    background-color: #286B14; /* Vihreä tausta otsikoille */
-    padding: 10px 0;
-    text-align: center;
-}
-
-p {
-    color: #000000;
-    margin: 20px;
-}
-
-/* Navigointi */
+/* Hampurilaisvalikon ja navigointipalkin asettelu */
 header {
-    background-color: #286B14; /* Metsänvihreä yläpalkki */
+    background-color: #286B14;
     height: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     padding: 0 20px;
+    position: relative;
 }
 
 .hamburger-menu {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    position: absolute;
+    right: 20px; /* Sijoitetaan oikealle */
+    top: 15px;
 }
 
 .hamburger-menu span {
     width: 25px;
     height: 3px;
     background-color: #FFFFFF;
-    margin: 4px;
+    margin: 4px 0;
 }
 
 .nav-links {
     display: none;
+    flex-direction: column;
+    background-color: #286B14;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
 }
 
 .nav-links.active {
-    display: block;
+    display: flex; /* Näytetään valikko, kun 'active'-luokka lisätään */
 }
 
 .nav-links li {
@@ -67,117 +51,19 @@ header {
     font-size: 18px;
 }
 
-/* Etusivu ja About me -sivun vihreät osiot */
-section#home, section#about, section#portfolio, section#contact {
-    background-color: #286B14; /* Metsänvihreä tausta */
-    color: #FFFFFF;
-    padding: 20px;
-    text-align: center;
-    width: 100vw; /* Täyttää koko näkymän leveyden */
-    margin-left: calc(-50vw + 50%); /* Poistaa sivuttain marginaalit */
-}
-
-section#about p {
-    background-color: #FFFFFF;
-    color: #000000;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
-}
-
-/* Kuvan ja tekstin asettelu */
-section img {
-    width: 80%;
-    height: auto;
-    margin: 20px auto;
-    display: block;
-    background-color: #FFFFFF;
-
-}
-
-/* Portfolio - Korttien asettelu */
-.project-card {
-    background-color: #FFFFFF;
-    margin-bottom: 20px;
-    padding: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.project-card img {
-    width: 100%;
-    height: auto;
-}
-
-/* Contact Me -lomake */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form label {
-    margin-top: 10px;
-}
-
-form input, form textarea {
-    width: 90%;
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid #286B14;
-}
-
-button {
-    background-color: #bef872; /* Vaaleanvihreä painike */
-    color: #000000;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-button:hover {
-    background-color: #286B14; /* Hover-efekti painikkeelle */
-    color: #FFFFFF;
-}
-
-.social-links a {
-    margin: 10px;
-    color: #286B14;
-    text-decoration: none;
-}
-
-.social-links a:hover {
-    color: #bef872;
-}
-
-/* Responsiivisuus */
+/* Työpöytänäkymä */
 @media (min-width: 768px) {
     .nav-links {
         display: flex;
+        position: static; /* Asetetaan normaaliksi työpöytänäkymässä */
+        flex-direction: row;
+    }
+
+    .hamburger-menu {
+        display: none; /* Piilotetaan hampurilaisvalikko työpöytänäkymässä */
     }
 
     .nav-links li {
         margin: 0 10px;
     }
-
-    /* Poistetaan sivumarginaalit ja venytetään osiot koko leveydelle */
-    section#home, section#about, section#portfolio, section#contact {
-        width: 100vw; /* Täysi näytön leveys */
-        margin-left: calc(-50vw + 50%); /* Keskittää ja poistaa ylimääräiset marginaalit */
-    }
-
-    .project-card {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .project-card img {
-        width: 40%;
-    }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }

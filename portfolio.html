@@ -90,12 +90,31 @@
             margin: 0 auto;
         }
 
-        /* Linkki etusivulle hampurilaisvalikosta */
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            margin-left: 20px;
+        /* Projektien tyyli */
+        .project {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .project h2 {
+            font-family: 'Lora', serif; /* Otsikoiden fontti */
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .project img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding-bottom: 20px;
         }
 
     </style>
@@ -111,7 +130,7 @@
         <nav id="navMenu">
             <a href="index.html">Etusivu</a>
             <a href="about.html">Tietoa minusta</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="portfolio.html">Portfolio</a> <!-- Tämä sivu -->
         </nav>
     </header>
 
@@ -121,6 +140,19 @@
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Sed vestibulum dui vitae velit luctus, a bibendum mi congue. Donec venenatis, tortor at sodales sollicitudin, enim elit consequat nisi, in vehicula lacus metus sit amet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
+    </div>
+
+    <!-- Projektit -->
+    <div class="project">
+        <h2>Projekti 1</h2>
+        <img src="https://via.placeholder.com/600x400" alt="Projekti 1 kuva">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac felis sit amet urna congue luctus eget non augue.</p>
+    </div>
+
+    <div class="project">
+        <h2>Projekti 2</h2>
+        <img src="https://via.placeholder.com/600x400" alt="Projekti 2 kuva">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam fringilla justo et augue malesuada bibendum.</p>
     </div>
 
     <script>

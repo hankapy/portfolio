@@ -3,40 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tietoa minusta</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tietoa Minusta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /* Yleisvalinnat ja fonttien määritys */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif; /* Tekstien oletusfontti */
+            background-color: #013220; /* Taustaväri (metsänvihreä) */
+            color: white; /* Tekstin väri */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        /* Logon tyyli */
+        .logo {
+            font-family: 'Lora', serif; /* Logon ja otsikoiden fontti */
+            font-size: 24px;
+        }
+
+        /* Hampurilaisvalikon tyyli */
+        .menu {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu div {
+            width: 30px;
+            height: 3px;
+            background-color: white; /* Hampurilaisvalikon väri */
+            margin: 4px 0;
+        }
+
+        /* Pääsisältö */
+        .content {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .content h1 {
+            font-family: 'Lora', serif; /* Otsikon fontti */
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        /* Kuvan tyyli */
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; /* Pyöreä kuva */
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-family: 'Roboto', sans-serif; /* Tekstin fontti */
+            font-size: 18px;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Linkki etusivulle hampurilaisvalikosta */
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-left: 20px;
+        }
+
+    </style>
 </head>
 <body>
     <header>
+        <div class="logo">Logo</div>
         <nav>
-            <div class="hamburger-menu" id="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
+            <a href="index.html">Etusivu</a>
         </nav>
+        <div class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>Tietoa minusta</h2>
-        <p>Olen data-analyytikko ja Excel-osaaja. Minulla on vahva tausta datan visualisoinnissa ja analysoinnissa.</p>
-        <img src="hanna.jpg" alt="Hanna Pyrhösen kuva">
-    </section>
+    <div class="content">
+        <h1>Tietoa minusta</h1>
+        <img class="profile-image" src="https://via.placeholder.com/200" alt="Profiilikuva">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+    </div>
 
-    <!-- Hampurilaisvalikon toiminnallisuus -->
-    <script>
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const navLinks = document.getElementById('nav-links');
-
-        hamburgerMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
 </body>
 </html>

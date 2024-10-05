@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hannan Portfolio</title>
+    <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto&display=swap" rel="stylesheet">
     <style>
         /* Yleisvalinnat ja fonttien määritys */
@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Roboto', sans-serif; /* Tekstien oletusfontti */
-            background-color: #013220; /* Etusivun taustaväri (metsänvihreä) */
+            background-color: #013220; /* Taustaväri (metsänvihreä) */
             color: white; /* Tekstin väri */
         }
 
@@ -62,47 +62,32 @@
             margin-bottom: 10px;
         }
 
-        /* Etusivun pääsisältö */
-        .hero {
+        /* Pääsisältö */
+        .content {
             text-align: center;
-            margin-top: 100px;
+            margin-top: 50px;
         }
 
-        .hero h1 {
+        .content h1 {
             font-family: 'Lora', serif; /* Otsikon fontti */
-            font-size: 48px;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        /* Kuvan tyyli */
+        .portfolio-image {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
             margin-bottom: 20px;
         }
 
-        /* Kuvitusosion tyyli */
-        .image-section {
-            position: relative;
+        .content p {
+            font-family: 'Roboto', sans-serif; /* Tekstin fontti */
+            font-size: 18px;
             width: 80%;
             max-width: 600px;
-            margin: 50px auto;
-        }
-
-        .image-section img {
-            width: 100%;
-            height: auto;
-        }
-
-        .image-section .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Kuvituksen päällä oleva puoliläpinäkyvä kerros */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .image-section .overlay p {
-            font-family: 'Roboto', sans-serif; /* Kuvituksen päällä olevan tekstin fontti */
-            color: white;
-            font-size: 18px;
+            margin: 0 auto;
         }
 
     </style>
@@ -118,19 +103,16 @@
         <nav id="navMenu">
             <a href="index.html">Etusivu</a>
             <a href="about.html">Tietoa minusta</a>
-            <a href="portfolio.html">Portfolio</a> <!-- Lisätty linkki Portfolio-sivulle -->
+            <a href="portfolio.html">Portfolio</a> <!-- Tämä sivu -->
         </nav>
     </header>
 
-    <div class="hero">
-        <h1>Hei, olen Hanna!</h1>
-    </div>
-
-    <div class="image-section">
-        <img src="https://via.placeholder.com/600x400" alt="Kuvituskuva">
-        <div class="overlay">
-            <p>Lorem ipsum dolor sit amet</p>
-        </div>
+    <div class="content">
+        <h1>Portfolio</h1>
+        <img class="portfolio-image" src="https://via.placeholder.com/300x200" alt="Portfolio-kuva">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Sed vestibulum dui vitae velit luctus, a bibendum mi congue. Donec venenatis, tortor at sodales sollicitudin, enim elit consequat nisi, in vehicula lacus metus sit amet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
     </div>
 
     <script>

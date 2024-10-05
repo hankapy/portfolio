@@ -43,6 +43,25 @@
             margin: 4px 0;
         }
 
+        /* Navigointivalikko */
+        nav {
+            display: none; /* Piilotettu aluksi, näkyy klikkauksen jälkeen */
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
         /* Etusivun pääsisältö */
         .hero {
             text-align: center;
@@ -104,11 +123,15 @@
 <body>
     <header>
         <div class="logo">Logo</div>
-        <div class="menu">
+        <div class="menu" onclick="toggleMenu()">
             <div></div>
             <div></div>
             <div></div>
         </div>
+        <nav id="navMenu">
+            <a href="index.html">Etusivu</a>
+            <a href="about.html">Tietoa minusta</a>
+        </nav>
     </header>
 
     <div class="hero">
@@ -121,6 +144,17 @@
             <p>Lorem ipsum dolor sit amet</p>
         </div>
     </div>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.getElementById("navMenu");
+            if (nav.style.display === "block") {
+                nav.style.display = "none";
+            } else {
+                nav.style.display = "block";
+            }
+        }
+    </script>
 
 </body>
 </html>

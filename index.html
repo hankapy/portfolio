@@ -3,42 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hanna Pyrhönen - Etusivu</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Hannan Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /* Yleisvalinnat ja fonttien määritys */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif; /* Tekstien oletusfontti */
+            background-color: #013220; /* Etusivun taustaväri (metsänvihreä) */
+            color: white; /* Tekstin väri */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: transparent;
+        }
+
+        /* Logon tyyli */
+        .logo {
+            font-family: 'Lora', serif; /* Logon ja otsikoiden fontti */
+            font-size: 24px;
+        }
+
+        /* Hampurilaisvalikon tyyli */
+        .menu {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu div {
+            width: 30px;
+            height: 3px;
+            background-color: white; /* Hampurilaisvalikon väri */
+            margin: 4px 0;
+        }
+
+        /* Etusivun pääsisältö */
+        .hero {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .hero h1 {
+            font-family: 'Lora', serif; /* Otsikon fontti */
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        /* Kuvitusosion tyyli */
+        .image-section {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            margin: 50px auto;
+        }
+
+        .image-section img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-section .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Kuvituksen päällä oleva puoliläpinäkyvä kerros */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-section .overlay p {
+            font-family: 'Roboto', sans-serif; /* Kuvituksen päällä olevan tekstin fontti */
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Muutettavat värit ja fontit merkinnällä */
+        /* ============================== */
+        /* Fontit:
+            - Otsikot ja logo: 'Lora', serif;
+            - Teksti ja muut elementit: 'Roboto', sans-serif;
+        
+           Värit:
+            - Tekstin väri: white;
+            - Taustaväri: #013220 (metsänvihreä);
+            - Hampurilaisvalikko: white;
+            - Kuvituksen päällä oleva kerros: rgba(0, 0, 0, 0.5) */
+        /* ============================== */
+        
+    </style>
 </head>
 <body>
-    <!-- Navigointipalkki -->
     <header>
-        <nav>
-            <div class="hamburger-menu" id="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact Me</a></li>
-            </ul>
-        </nav>
+        <div class="logo">Logo</div>
+        <div class="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
-    <!-- Etusivu -->
-    <section id="home">
+    <div class="hero">
         <h1>Hei, olen Hanna!</h1>
-        <p>Tervetuloa portfoliooni. Täältä löydät tietoa minusta, projekteistani ja osaamisestani.</p>
-        <img src="kuvituskuva.jpg" alt="Kuvituskuva, jossa myös Hanna">
-    </section>
+    </div>
 
-    <!-- Hampurilaisvalikon toiminnallisuus -->
-    <script>
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const navLinks = document.getElementById('nav-links');
+    <div class="image-section">
+        <img src="https://via.placeholder.com/600x400" alt="Kuvituskuva">
+        <div class="overlay">
+            <p>Lorem ipsum dolor sit amet</p>
+        </div>
+    </div>
 
-        hamburgerMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
 </body>
 </html>

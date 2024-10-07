@@ -1,4 +1,4 @@
-/* Hampurilaisvalikon ja navigointipalkin asettelu */
+
 header {
     background-color: #286B14;
     height: 60px;
@@ -14,7 +14,7 @@ header {
     flex-direction: column;
     cursor: pointer;
     position: absolute;
-    right: 20px; /* Sijoitetaan oikealle */
+    right: 20px; 
     top: 15px;
 }
 
@@ -37,7 +37,7 @@ header {
 }
 
 .nav-links.active {
-    display: flex; /* Näytetään valikko, kun 'active'-luokka lisätään */
+    display: flex; 
 }
 
 .nav-links li {
@@ -51,16 +51,16 @@ header {
     font-size: 18px;
 }
 
-/* Työpöytänäkymä */
+
 @media (min-width: 768px) {
     .nav-links {
         display: flex;
-        position: static; /* Asetetaan normaaliksi työpöytänäkymässä */
+        position: static; 
         flex-direction: row;
     }
 
     .hamburger-menu {
-        display: none; /* Piilotetaan hampurilaisvalikko työpöytänäkymässä */
+        display: none; 
     }
 
     .nav-links li {

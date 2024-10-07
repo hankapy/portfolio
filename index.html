@@ -6,13 +6,13 @@
     <title>Hannan Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Lora&family=Roboto&display=swap" rel="stylesheet">
     <style>
-        /* Yleisvalinnat ja fonttien määritys */
+      
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Roboto', sans-serif; /* Tekstien oletusfontti */
-            background-color: #013220; /* Etusivun taustaväri (metsänvihreä) */
-            color: white; /* Tekstin väri */
+            font-family: 'Roboto', sans-serif;
+            background-color: #013220; 
+            color: white; 
         }
 
         header {
@@ -29,7 +29,7 @@
             font-size: 24px;
         }
 
-        /* Hampurilaisvalikon tyyli */
+       
         .menu {
             display: flex;
             flex-direction: column;
@@ -39,13 +39,13 @@
         .menu div {
             width: 30px;
             height: 3px;
-            background-color: white; /* Hampurilaisvalikon väri */
+            background-color: white; 
             margin: 4px 0;
         }
 
-        /* Navigointivalikko */
+       
         nav {
-            display: none; /* Piilotettu aluksi, tulee esiin klikkauksen jälkeen */
+            display: none; 
             position: absolute;
             top: 60px;
             right: 20px;
@@ -62,19 +62,19 @@
             margin-bottom: 10px;
         }
 
-        /* Etusivun pääsisältö */
+      
         .hero {
             text-align: center;
             margin-top: 100px;
         }
 
         .hero h1 {
-            font-family: 'Lora', serif; /* Otsikon fontti */
+            font-family: 'Lora', serif;
             font-size: 48px;
             margin-bottom: 20px;
         }
 
-        /* Kuvitusosion tyyli */
+      
         .image-section {
             position: relative;
             width: 80%;
@@ -93,14 +93,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5); /* Kuvituksen päällä oleva puoliläpinäkyvä kerros */
+            background-color: rgba(0, 0, 0, 0.5); 
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .image-section .overlay p {
-            font-family: 'Roboto', sans-serif; /* Kuvituksen päällä olevan tekstin fontti */
+            font-family: 'Roboto', sans-serif; 
             color: white;
             font-size: 18px;
         }
@@ -109,7 +109,9 @@
 </head>
 <body>
     <header>
-        <div class="logo">Logo</div>
+        <div class="logo">
+    <img src="logo.jpg" alt="Logo" width="100"height "100"> 
+    </div>    
         <div class="menu" onclick="toggleMenu()">
             <div></div>
             <div></div>
@@ -118,7 +120,7 @@
         <nav id="navMenu">
             <a href="index.html">Etusivu</a>
             <a href="about.html">Tietoa minusta</a>
-            <a href="portfolio.html">Portfolio</a> <!-- Lisätty linkki Portfolio-sivulle -->
+            <a href="portfolio.html">Portfolio</a> 
         </nav>
     </header>
 
